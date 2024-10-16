@@ -1,14 +1,12 @@
 <script lang="ts">
-	import type { QRCodeOptions } from '$lib/qrcode';
 	import {
 		Dialog,
-		DialogHeader,
-		DialogTitle,
+		DialogClose,
 		DialogContent,
-		DialogClose
+		DialogHeader,
+		DialogTitle
 	} from '$lib/components/ui/dialog';
 	import DialogDescription from '../ui/dialog/dialog-description.svelte';
-	import { onMount } from 'svelte';
 
 	type Props = {
 		dataUrl: string | null;

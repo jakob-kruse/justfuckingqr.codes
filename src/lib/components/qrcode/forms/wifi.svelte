@@ -11,11 +11,11 @@
 	import { Input } from '$lib/components/ui/input';
 	import { RadioGroup, RadioGroupInput, RadioGroupItem } from '$lib/components/ui/radio-group';
 	import { QRCodeWIFISchema, type QRCodeWIFI } from '$lib/qrcode';
+	import { cn } from '$lib/utils';
 	import { superForm } from 'sveltekit-superforms';
 	import { valibot } from 'sveltekit-superforms/adapters';
 	import { defaults } from 'sveltekit-superforms/client';
 	import SubmitButton from './submit-button.svelte';
-	import { cn } from '$lib/utils';
 
 	let { onSubmit }: FormProps = $props();
 

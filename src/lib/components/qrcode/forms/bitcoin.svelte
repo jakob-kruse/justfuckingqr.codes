@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { FormProps } from '$lib/components/qrcode/forms';
 	import {
-		FormButton,
 		FormControl,
 		FormField,
 		FormFieldErrors,
@@ -11,10 +10,7 @@
 	import { Textarea } from '$lib/components/ui/textarea';
 	import {
 		QRCodeBitcoinSchema,
-		QRCodeVCardSchema,
-		type QRCodeBitcoin,
-		type QRCodeEmail,
-		type QRCodeVCard
+		type QRCodeBitcoin
 	} from '$lib/qrcode';
 	import { superForm } from 'sveltekit-superforms';
 	import { valibot } from 'sveltekit-superforms/adapters';

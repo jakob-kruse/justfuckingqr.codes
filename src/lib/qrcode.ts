@@ -30,10 +30,7 @@ export type QRCodeURL = InferOutput<typeof QRCodeURLSchema>;
 
 export const QRCodeVCardSchema = object({
 	type: literal('vcard'),
-	version: union([
-		literal('v2'),
-		literal('v3')
-	]),
+	version: union([literal('v2'), literal('v3')]),
 	firstName: optional(string()),
 	lastName: optional(string()),
 	organization: optional(string()),
@@ -44,7 +41,7 @@ export const QRCodeVCardSchema = object({
 	faxWork: optional(string()),
 	faxPrivate: optional(string()),
 	email: optional(pipe(string(), email('Email must be a valid email address'))),
-	website: optional(pipe(string(), url("Website must be a valid URL"))),
+	website: optional(pipe(string(), url('Website must be a valid URL'))),
 	street: optional(string()),
 	zipCode: optional(string()),
 	city: optional(string()),
@@ -69,7 +66,6 @@ export const QRCodeEmailSchema = object({
 });
 
 export type QRCodeEmail = InferOutput<typeof QRCodeEmailSchema>;
-
 
 export const QRCodeWIFISchema = object({
 	type: literal('wifi'),
@@ -160,7 +156,6 @@ export async function generateQRCode(options: QRCodeOptions): Promise<string> {
 
 	return await QRCode.toDataURL(data);
 }
-
 
 export const debouncedGenerateQRCode = debounce(generateQRCode, 300);
 

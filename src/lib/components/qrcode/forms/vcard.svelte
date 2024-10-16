@@ -1,12 +1,6 @@
 <script lang="ts">
 	import type { FormProps } from '$lib/components/qrcode/forms';
-	import {
-		FormButton,
-		FormControl,
-		FormField,
-		FormFieldErrors,
-		FormLabel
-	} from '$lib/components/ui/form';
+	import { FormControl, FormField, FormFieldErrors, FormLabel } from '$lib/components/ui/form';
 	import { Input } from '$lib/components/ui/input';
 	import { QRCodeVCardSchema, type QRCodeVCard } from '$lib/qrcode';
 	import { superForm } from 'sveltekit-superforms';
